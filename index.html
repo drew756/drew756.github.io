@@ -1,71 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drew Hull</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f9f9f7;
-      color: #1a1a1a;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-      max-width: 600px;
-      width: 100%;
-      padding: 3rem 2.5rem;
-      text-align: center;
-    }
-    img.avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 3px solid #e8e8e8;
-      margin-bottom: 1.5rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    h1 { font-size: 2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.4rem; }
-    .tagline { font-size: 0.95rem; color: #666; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 1px; }
-    .divider { border: none; border-top: 1px solid #eee; margin: 1.5rem 0; }
-    h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; color: #999; margin-bottom: 1rem; }
-    p { font-size: 1rem; line-height: 1.75; color: #444; text-align: left; }
-    .links { margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; }
-    .links a {
-      text-decoration: none;
-      color: #1a1a1a;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 0.5rem 1.2rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      transition: background 0.2s;
-    }
-    .links a:hover { background: #f0f0f0; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drew Hull</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --blush: #e8c4c4; --blush-lt: #f0d4d4; --cream: #f5f0eb;
+    --ivory: #faf7f4; --warm-dk: #2a2220; --warm-md: #5c4a48;
+    --warm-lt: #9c7e7c; --accent: #c49090; --accent-dk: #a87070;
+  }
+  html, body { min-height: 100%; }
+  body { font-family: 'Inter', sans-serif; background: var(--ivory); color: var(--warm-dk); display: flex; flex-direction: column; align-items: center; }
+  .hero { width: 100%; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5rem 2rem 4rem; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(232,196,196,0.45) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 80% 100%, rgba(196,144,144,0.18) 0%, transparent 60%), var(--ivory); position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -120px; right: -120px; width: 480px; height: 480px; border-radius: 50%; border: 1px solid rgba(232,196,196,0.35); pointer-events: none; }
+  .hero::after { content: ''; position: absolute; bottom: -160px; left: -160px; width: 560px; height: 560px; border-radius: 50%; border: 1px solid rgba(232,196,196,0.25); pointer-events: none; }
+  .eyebrow { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent-dk); margin-bottom: 1.25rem; opacity: 0.85; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 9vw, 7rem); font-weight: 300; line-height: 1.0; letter-spacing: -0.01em; color: var(--warm-dk); margin-bottom: 1rem; }
+  .tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-weight: 400; font-style: italic; color: var(--warm-md); letter-spacing: 0.02em; margin-bottom: 2.5rem; }
+  .divider-line { width: 48px; height: 1px; background: var(--accent); margin: 0 auto 2.5rem; opacity: 0.7; }
+  .links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .links a { display: inline-block; font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; color: var(--warm-dk); padding: 0.65rem 1.6rem; border: 1px solid var(--blush); border-radius: 2px; transition: background 0.2s, border-color 0.2s, color 0.2s; }
+  .links a:hover { background: var(--blush-lt); border-color: var(--accent); color: var(--warm-dk); }
+  .about { width: 100%; max-width: 680px; margin: 0 auto; padding: 5rem 2rem 7rem; }
+  .about-label { font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent-dk); margin-bottom: 1.5rem; opacity: 0.8; }
+  .about p { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.15rem, 2.5vw, 1.35rem); font-weight: 400; line-height: 1.85; color: var(--warm-md); max-width: 62ch; }
+  footer { width: 100%; border-top: 1px solid var(--blush); padding: 2rem; text-align: center; }
+  footer p { font-family: 'Inter', sans-serif; font-size: 0.72rem; color: var(--warm-lt); letter-spacing: 0.06em; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  .hero > * { animation: fadeUp 0.9s ease both; }
+  .eyebrow { animation-delay: 0.1s; } .hero h1 { animation-delay: 0.25s; } .tagline { animation-delay: 0.4s; } .divider-line { animation-delay: 0.5s; } .links { animation-delay: 0.6s; }
+</style>
 </head>
 <body>
-  <div class="card">
-    <img class="avatar" src="https://github.com/drew756.png" alt="Drew Hull">
+  <section class="hero">
+    <p class="eyebrow">Washington D.C. &nbsp;&middot;&nbsp; Austin, TX</p>
     <h1>Drew Hull</h1>
     <p class="tagline">Lobbyist &amp; Regulatory Strategist</p>
-    <hr class="divider">
-    <h2>About Me</h2>
-    <p>I'm a lobbyist and regulatory consultant focused on global drug policy reform. As a principal at Jefferson &amp; Associates, a Texas-based government affairs firm, I work with cannabis, hemp, and other regulated-industry stakeholders to navigate complex policy environments, shape legislation, and turn political risk into strategic advantage. My work spans federal and state lobbying, coalition building, and strategic communications — helping clients not just comply with the rules, but help write them.</p>
-    <div class="links">
-      <a href="https://github.com/drew756" target="_blank">GitHub</a>
-      <a href="https://www.ja.partners" target="_blank">Jefferson &amp; Associates</a>
-    </div>
-  </div>
+    <div class="divider-line"></div>
+    <nav class="links">
+      <a href="https://www.ja.partners" target="_blank" rel="noopener">Jefferson &amp; Associates</a>
+      <a href="https://github.com/drew756" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </section>
+  <section class="about">
+    <p class="about-label">About</p>
+    <p>I'm a lobbyist and regulatory consultant focused on global drug policy reform. As a principal at Jefferson&nbsp;&amp;&nbsp;Associates, a Texas-based government affairs firm, I work with cannabis, hemp, and other regulated-industry stakeholders to navigate complex policy environments, shape legislation, and turn political risk into strategic advantage. My work spans federal and state lobbying, coalition building, and strategic communications — helping clients not just comply with the rules, but help write them.</p>
+  </section>
+  <footer><p>&copy; 2026 Drew Hull</p></footer>
 </body>
 </html>
