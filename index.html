@@ -34,33 +34,33 @@
       padding: 5rem 2rem 4rem;
     }
 
-    /* Card: portrait left, text right. Portrait sizes itself naturally. */
+    /* Card: portrait left, text right. Portrait shows naturally — no stretching. */
     .card {
       display: flex;
       max-width: 900px; width: 100%;
       border: 1px solid var(--gold-dim);
       background: rgba(10,8,5,0.55); backdrop-filter: blur(2px);
-      align-items: stretch;
+      align-items: flex-start; /* KEY: columns take their own height, no stretching */
     }
 
+    /* Portrait column: image displays at natural aspect ratio */
     .portrait {
       width: 320px;
       flex-shrink: 0;
-      overflow: hidden;
+      background: rgba(8,6,3,0.7); /* dark fill for any space below image */
+      align-self: stretch; /* column fills card height */
+      display: flex;
+      align-items: flex-start;
     }
-    /* Natural aspect ratio — no stretching or squishing */
     .portrait img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 40% top;
+      height: auto; /* natural aspect ratio — zero squishing */
       display: block;
     }
 
     .panel {
       flex: 1;
       padding: 3rem 2.5rem;
-      display: flex; flex-direction: column; justify-content: center;
       border-left: 1px solid var(--gold-dim);
     }
 
@@ -83,7 +83,7 @@
 
     @media (max-width: 680px) {
       .card { flex-direction: column; }
-      .portrait { width: 100%; height: 360px; }
+      .portrait { width: 100%; }
       .panel { border-left: none; border-top: 1px solid var(--gold-dim); padding: 2rem 1.5rem; }
     }
   </style>
