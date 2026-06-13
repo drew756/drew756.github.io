@@ -309,24 +309,14 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <div class="hero__inner">
-        <div>
-          <p class="eyebrow hero__eyebrow">Principal &amp; Co-Founder · Jefferson &amp; Associates LLC</p>
-          <h1 class="hero__name">Drew&nbsp;&nbsp;Hull<span class="dot">.</span></h1>
-          <p class="hero__tag">Lobbyist · Regulatory Strategist · Policy Drafter — federal hemp &amp; cannabis law, Dallas, Texas.</p>
-          <div class="hero__cta">
-            <a class="btn btn--solid" href="#connect">Get in Touch</a>
-            <a class="btn" href="#about">Learn More</a>
-          </div>
-          <div class="scroll-cue">Scroll</div>
-        </div>
-        <div class="hero__photo">
-          <div class="hero__photo-frame">
-            <img src="hero.jpg" alt="Drew Hull at the U.S. Capitol, Washington D.C.">
-          </div>
-          <p class="hero__photo-cap">U.S. Capitol · Washington, D.C.</p>
-        </div>
+      <p class="eyebrow hero__eyebrow">Principal &amp; Co-Founder · Jefferson &amp; Associates LLC</p>
+      <h1 class="hero__name">Drew&nbsp;&nbsp;Hull<span class="dot">.</span></h1>
+      <p class="hero__tag">Lobbyist · Regulatory Strategist · Policy Drafter — federal hemp &amp; cannabis law, Dallas, Texas.</p>
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="#connect">Get in Touch</a>
+        <a class="btn" href="#about">Learn More</a>
       </div>
+      <div class="scroll-cue">Scroll</div>
     </div>
   </section>
 
@@ -375,7 +365,7 @@
           </dl>
 
           <figure class="portrait" style="margin:2.4rem 0 0;">
-            <img id="portrait-img" src="portrait.jpg" alt="Drew Hull, Principal and Co-Founder of Jefferson &amp; Associates LLC">
+            <img id="portrait-img" alt="Drew Hull, Principal and Co-Founder of Jefferson &amp; Associates LLC">
             <div class="portrait__fallback" aria-hidden="true"><span>DH</span></div>
           </figure>
           <figcaption class="portrait__cap">Drew Hull — Jefferson &amp; Associates LLC · Dallas, TX</figcaption>
@@ -385,7 +375,7 @@
   </section>
 
   <!-- THESIS -->
-  <section class="block block--alt thesis" style="background:linear-gradient(rgba(241,236,227,.91),rgba(241,236,227,.91)),url('painting.jpg') center/cover; border-block:1px solid var(--line);">
+  <section class="block block--alt thesis">
     <div class="wrap reveal">
       <span class="thesis__mark">“</span>
       <p class="thesis__line">Read the code.<br><em>Write the rule.</em></p>
@@ -491,50 +481,6 @@
       <p class="eyebrow">Selected Appearances</p>
       <h2 class="section-head">Speaking &amp; Media<span style="color:var(--oxblood)">.</span></h2>
 
-      <!-- VIDEO CARDS -->
-      <div class="media-grid">
-        <a class="media-card reveal" href="https://hometownhero.com/about-us/hemp-advocacy/" target="_blank" rel="noopener">
-          <div class="media-card__thumb" style="background:linear-gradient(135deg,var(--ink) 0%,var(--oxblood-deep) 100%); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.6rem;">
-            <span style="font-family:var(--display);font-style:italic;font-size:1.5rem;color:var(--paper);opacity:.85;letter-spacing:-.02em;">Panel Discussion</span>
-            <span style="font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--line);opacity:.8;">April 2024</span>
-          </div>
-          <div class="media-card__body">
-            <p class="media-card__venue">Hometown Hero · April 2024 · Panelist</p>
-            <h4 class="media-card__title">Innovations, Challenges &amp; Opportunities for Hemp-Derived Cannabinoids</h4>
-          </div>
-        </a>
-        <a class="media-card reveal" href="https://www.youtube.com/watch?v=O_cAzI0rlg8" target="_blank" rel="noopener">
-          <div class="media-card__thumb">
-            <img src="https://img.youtube.com/vi/O_cAzI0rlg8/maxresdefault.jpg" alt="Botanical vs Cannabis-Derived Terpenes">
-            <div class="media-card__play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-          <div class="media-card__body">
-            <p class="media-card__venue">True Terpenes · YouTube</p>
-            <h4 class="media-card__title">Botanical vs. Cannabis-Derived Terpenes: What's the Difference?</h4>
-          </div>
-        </a>
-        <a class="media-card reveal" href="https://www.youtube.com/watch?v=PLW1BGWDXOM" target="_blank" rel="noopener">
-          <div class="media-card__thumb">
-            <img src="https://img.youtube.com/vi/PLW1BGWDXOM/maxresdefault.jpg" alt="Introduction to Terpenes with Drew Hull">
-            <div class="media-card__play"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
-          <div class="media-card__body">
-            <p class="media-card__venue">Cannabis Career Academy · Faculty</p>
-            <h4 class="media-card__title">Meet Your Instructor: Introduction to Terpenes with Drew Hull</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- PRESS COVERAGE -->
-      <div class="press reveal">
-        <p class="press__label">Press &amp; Coverage</p>
-        <ul class="press__items">
-          <li><a href="https://www.globenewswire.com/news-release/2024/04/19/2866277/0/en/Challenges-and-Opportunities-for-Hemp-derived-Cannabinoids-Addressed-in-4-20-Webinar.html" target="_blank" rel="noopener">GlobeNewswire — April 2024</a></li>
-          <li><a href="https://hometownhero.com/about-us/hemp-advocacy/" target="_blank" rel="noopener">Hometown Hero Hemp Advocacy</a></li>
-          <li><a href="https://www.linkedin.com/in/drewhull1992/" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-      </div>
-
       <div class="talks">
         <div class="talk reveal">
           <div class="talk__year">2024</div>
@@ -614,11 +560,18 @@
     document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
   }
 
-  // Portrait
+  // Portrait: try images/drew.jpg, then existing portrait.jpg, else show monogram fallback
   (function(){
     var img = document.getElementById('portrait-img');
     if (!img) return;
-    img.onerror = function(){ img.style.display = 'none'; }; // reveals monogram fallback if image missing
+    var sources = ['images/drew.jpg', 'portrait.jpg'];
+    var i = 0;
+    img.onerror = function(){
+      i++;
+      if (i < sources.length){ img.src = sources[i]; }
+      else { img.style.display = 'none'; }   // reveals the monogram fallback behind it
+    };
+    img.src = sources[0];
   })();
 </script>
 
