@@ -237,6 +237,16 @@
   a.connect__v:hover{ background-size:100% 1px; color:var(--oxblood); }
   .connect__todo{ font-family:var(--mono); font-size:.7rem; letter-spacing:.04em; color:var(--oxblood); }
 
+  /* ---------- speaking ---------- */
+  .talks{ margin-top:3.5rem; border-top:1px solid var(--ink); }
+  .talk{ display:grid; grid-template-columns:auto 1fr; gap:clamp(1.1rem,4vw,3.2rem); padding-block:2rem; border-bottom:1px solid var(--line); }
+  .talk__year{ font-family:var(--mono); font-size:.82rem; color:var(--oxblood); letter-spacing:.06em; padding-top:.4rem; min-width:5ch; }
+  .talk__venue{ font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:.55rem; }
+  .talk__title{ font-family:var(--display); font-weight:400; font-size:clamp(1.3rem,2.6vw,1.7rem); line-height:1.18; letter-spacing:-.01em; margin:0 0 .55rem; }
+  .talk__desc{ margin:0; max-width:62ch; }
+  .talk__watch{ display:inline-block; margin-top:.95rem; font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--oxblood); text-decoration:none; border-bottom:1px solid transparent; }
+  .talk__watch:hover{ border-bottom-color:var(--oxblood); }
+
   /* ---------- footer ---------- */
   .site-footer{ border-top:1px solid var(--line); padding-block:2.5rem; }
   .foot{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; font-family:var(--mono); font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
@@ -259,6 +269,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#expertise">Expertise</a></li>
       <li><a href="#record">Record</a></li>
+      <li><a href="#speaking">Speaking</a></li>
       <li><a href="#connect">Connect</a></li>
     </ul>
   </div>
@@ -432,6 +443,44 @@
           <dd>Five years as head of government relations at True Terpenes; competitive policy debater and collegiate debate coach.</dd>
         </div>
       </dl>
+    </div>
+  </section>
+
+  <!-- SPEAKING -->
+  <section class="block" id="speaking">
+    <div class="wrap">
+      <p class="eyebrow">Selected Appearances</p>
+      <h2 class="section-head">Speaking &amp; Media<span style="color:var(--oxblood)">.</span></h2>
+
+      <div class="talks">
+        <div class="talk reveal">
+          <div class="talk__year">2024</div>
+          <div>
+            <span class="talk__venue">Hometown Hero · Policy Webinar</span>
+            <h3 class="talk__title">Innovations, Challenges &amp; Opportunities for Hemp-Derived Cannabinoids</h3>
+            <p class="talk__desc">Panelist on the regulatory outlook for hemp-derived cannabinoids in 2024 and beyond — appearing alongside Cynthia Cabrera and other industry leaders to assess the shifting federal and state landscape.</p>
+          </div>
+        </div>
+
+        <div class="talk reveal">
+          <div class="talk__year">2022</div>
+          <div>
+            <span class="talk__venue">MJBizCon · Las Vegas</span>
+            <h3 class="talk__title">Terpenes: Sensory Analysis, Product Innovation &amp; Compliance</h3>
+            <p class="talk__desc">Co-presented with Dr. Shawna Vreeke on terpene science — how sensory analysis informs product innovation, safety, and regulatory compliance for cannabis and hemp operators.</p>
+          </div>
+        </div>
+
+        <div class="talk reveal">
+          <div class="talk__year">Faculty</div>
+          <div>
+            <span class="talk__venue">Cannabis Career Academy · Instructor</span>
+            <h3 class="talk__title">Introduction to Terpenes</h3>
+            <p class="talk__desc">Faculty instructor for the "Intro to Terpenes" module of the Dispensary Agent Certification — translating terpene chemistry and the entourage effect for working budtenders and operators.</p>
+            <a class="talk__watch" href="https://www.youtube.com/watch?v=PLW1BGWDXOM" target="_blank" rel="noopener">Watch the lesson →</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
