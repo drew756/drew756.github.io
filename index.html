@@ -23,6 +23,8 @@
     --line:#CBC1B0;
     --oxblood:#6E2A28;
     --oxblood-deep:#54201E;
+    --gold:#C49A50;
+    --gold-deep:#9E7B3A;
 
     --display:"Fraunces", Georgia, "Times New Roman", serif;
     --body:"Newsreader", Georgia, serif;
@@ -187,7 +189,7 @@
   .fact dt{ font-family:var(--mono); font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--oxblood); margin-bottom:.45rem; }
   .fact dd{ margin:0; font-size:.98rem; line-height:1.5; }
 
-  .portrait{ position:relative; margin-top:2.4rem; aspect-ratio:4/5; background:var(--paper); border:1px solid var(--line); overflow:hidden; }
+  .portrait{ position:relative; margin-top:2.4rem; aspect-ratio:4/5; background:var(--paper); border:1px solid var(--line); overflow:hidden; box-shadow:6px 12px 48px rgba(27,25,22,.16), 2px 4px 14px rgba(27,25,22,.10); }
   .portrait img{ width:100%; height:100%; object-fit:cover; filter:grayscale(18%) contrast(1.02); }
   .portrait__fallback{
     position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
@@ -215,7 +217,7 @@
   /* ---------- expertise ---------- */
   .exp-list{ margin-top:3.5rem; border-top:1px solid var(--ink); }
   .exp{ display:grid; grid-template-columns:auto 1fr; gap:clamp(1.2rem,4vw,3.5rem); padding-block:2.4rem; border-bottom:1px solid var(--line); }
-  .exp__num{ font-family:var(--display); font-weight:300; font-size:clamp(1.6rem,4vw,2.4rem); color:var(--oxblood); line-height:1; min-width:2.2ch; }
+  .exp__num{ font-family:var(--display); font-weight:300; font-size:clamp(1.6rem,4vw,2.4rem); color:var(--gold); line-height:1; min-width:2.2ch; }
   .exp__title{ font-family:var(--display); font-weight:400; font-size:clamp(1.4rem,3vw,1.9rem); line-height:1.1; letter-spacing:-.01em; margin:0 0 .8rem; }
   .exp__desc{ margin:0; max-width:64ch; color:var(--ink); }
   .exp__auth{ margin:1.1rem 0 0; font-family:var(--mono); font-size:.8rem; line-height:1.6; color:var(--muted); border-left:2px solid var(--oxblood); padding-left:.9rem; }
@@ -262,6 +264,19 @@
   @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
 
   :focus-visible{ outline:2px solid var(--oxblood); outline-offset:3px; }
+
+  /* ---------- dutch masters art break ---------- */
+  .art-break{ position:relative; width:100%; overflow:hidden; height:clamp(200px,26vw,400px); display:block; }
+  .art-break img{ width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; filter:saturate(80%) contrast(1.08) brightness(.84); }
+  .art-break__veil{ position:absolute; inset:0; background:linear-gradient(to bottom, var(--paper-2) 0%, transparent 32%, transparent 68%, var(--paper) 100%); pointer-events:none; }
+
+  /* ---------- rose ornament divider ---------- */
+  .rose-ornament{ display:flex; align-items:center; justify-content:center; gap:1.8rem; padding:clamp(1.6rem,4vh,3rem) var(--gutter); max-width:var(--maxw); margin-inline:auto; }
+  .rose-ornament::before, .rose-ornament::after{ content:""; flex:1; max-width:140px; height:1px; background:var(--line); }
+  .rose-ornament__img{ width:58px; height:58px; border-radius:50%; object-fit:cover; border:1px solid var(--line); filter:grayscale(14%) contrast(1.06) saturate(90%); flex-shrink:0; box-shadow:2px 4px 14px rgba(27,25,22,.12); }
+
+  /* ---------- gold cite accents ---------- */
+  .exp__auth b{ color:var(--gold-deep); }
 
   /* ---------- hero photo ---------- */
   .hero__inner{ display:grid; grid-template-columns:1fr auto; gap:clamp(2rem,5vw,5rem); align-items:center; }
@@ -398,6 +413,11 @@
     </div>
   </section>
 
+  <!-- ROSE ORNAMENT -->
+  <div class="rose-ornament" aria-hidden="true">
+    <img class="rose-ornament__img" src="rose.jpg" alt="">
+  </div>
+
   <!-- EXPERTISE -->
   <section class="block" id="expertise">
     <div class="wrap">
@@ -488,6 +508,12 @@
       </dl>
     </div>
   </section>
+
+  <!-- ART BREAK -->
+  <div class="art-break" aria-hidden="true">
+    <img src="painting.jpg" alt="">
+    <div class="art-break__veil"></div>
+  </div>
 
   <!-- SPEAKING -->
   <section class="block" id="speaking">
