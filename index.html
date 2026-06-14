@@ -190,7 +190,7 @@
   .fact dd{ margin:0; font-size:.98rem; line-height:1.5; }
 
   .portrait{ position:relative; margin-top:2.4rem; aspect-ratio:4/5; background:var(--paper); border:1px solid var(--line); overflow:hidden; box-shadow:6px 12px 48px rgba(27,25,22,.16), 2px 4px 14px rgba(27,25,22,.10); }
-  .portrait img{ width:100%; height:100%; object-fit:cover; filter:grayscale(18%) contrast(1.02); }
+  .portrait img{ width:100%; height:100%; object-fit:cover; filter:grayscale(22%) contrast(1.06) brightness(.97) sepia(8%); position:relative; z-index:1; display:block; }
   .portrait__fallback{
     position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
     background:
@@ -397,7 +397,7 @@
             <img id="portrait-img" src="portrait.jpg" alt="Drew Hull, Principal and Co-Founder of Jefferson &amp; Associates LLC">
             <div class="portrait__fallback" aria-hidden="true"><span>DH</span></div>
           </figure>
-          <figcaption class="portrait__cap">Drew Hull — Jefferson &amp; Associates LLC · Dallas, TX</figcaption>
+          <figcaption class="portrait__cap">Drew Hull &amp; Jefferson — Dallas, TX</figcaption>
         </div>
       </div>
     </div>
@@ -644,11 +644,15 @@
     document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
   }
 
-  // Portrait
+  // Portrait — hide fallback when image loads, show it only on error
   (function(){
     var img = document.getElementById('portrait-img');
     if (!img) return;
-    img.onerror = function(){ img.style.display = 'none'; }; // reveals monogram fallback if image missing
+    var fallback = img.parentElement && img.parentElement.querySelector('.portrait__fallback');
+    img.onload  = function(){ if (fallback) fallback.style.display = 'none'; };
+    img.onerror = function(){ img.style.display = 'none'; };
+    // If already cached and loaded before this script runs
+    if (img.complete && img.naturalWidth) { if (fallback) fallback.style.display = 'none'; }
   })();
 </script>
 
